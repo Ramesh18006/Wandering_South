@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Explore South India </title> <!-- GOOGLE FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"> <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body> <!-- ================ NAVBAR ================= -->
+  <header class="explore-navbar">
+    <div class="explore-logo"> WANDERING <br> SOUTH </div>
+    <nav class="explore-nav-links" id="exploreNavLinks"> <a href="index.html">Home</a> <a href="explore.html"
+        class="active-link">Explore</a> <a href="#">Packages</a> <a href="#">Contact</a> </nav> <button
+      class="journey-btn"> Plan Your Journey </button>
+    <div class="explore-menu-toggle" id="exploreMenuToggle"> ☰ </div>
+  </header> <!-- ================= HERO SECTION ================= -->
+  <section class="explore-hero">
+    <div class="explore-left">
+      <h1> Explore South India <br> Your Way </h1>
+      <p> Choose the experience you love and discover the perfect destinations across Tamil Nadu & Kerala. </p>
+      <!-- SEARCH -->
+      <div class="search-container"> <input type="text" id="searchInput" placeholder="Where would you like to go?">
+        <button> Search </button> <!-- SEARCH SUGGESTIONS -->
+        <div class="suggestions-box" id="suggestionsBox"></div>
+      </div>
+    </div> <!-- RIGHT IMAGE GRID -->
+    <div class="explore-right">
+      <div class="grid-item tall"> <img src="Images/mount.png"> </div>
+      <div class="grid-item"> <img src="Images/mahabalipuram_shore_temple_tamil_nadu_rock_cut_monuments_and_stone_chariots_by.png"> </div>
+      <div class="grid-item"> <img src="Images/beach_view.png"> </div>
+      <div class="grid-item"> <img src="Images/rameshwaram_coastline_where_the_bay_of_bengal_meets_the_indian_ocean_long_beach.png"> </div>
+    </div>
+  </section> <!-- ================= CATEGORY SECTION ================= -->
+  <section class="category-section">
+    <h2> What Kind of Experience Are You Looking For? </h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="filterDestinations('hill')"> <img src="Images/ooty_mountain_station_tamil_nadu_with_a_placid_lake_surrounded_by_quiet_pine.png">
+        <div class="category-overlay">
+          <h3>Hill Stations</h3>
+          <p>Explore</p>
+        </div>
+      </div>
+      <div class="category-card" onclick="filterDestinations('temple')"> <img src="Images/Temple_piller.png">
+        <div class="category-overlay">
+          <h3>Temples & Spiritual</h3>
+          <p>Explore</p>
+        </div>
+      </div>
+      <div class="category-card" onclick="filterDestinations('beach')"> <img src="Images/beach.png">
+        <div class="category-overlay">
+          <h3>Beaches</h3>
+          <p>Explore</p>
+        </div>
+      </div>
+      <div class="category-card" onclick="filterDestinations('backwater')"> <img src="Images/pichavaram_mangroves_tamil_nadu_narrow_water_trails_under_a_canopy_of_mangrove (1).png">
+        <div class="category-overlay">
+          <h3>Backwaters</h3>
+          <p>Explore</p>
+        </div>
+      </div>
+      <div class="category-card" onclick="filterDestinations('historic')"> <img src="Images/fort_kochi_streets_kerala_colonial_architecture_with_portuguese_and_dutch.png">
+        <div class="category-overlay">
+          <h3>Historic Places</h3>
+          <p>Explore</p>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ================= FEATURED DESTINATIONS ================= -->
+  <section class="featured-section">
+    <div class="featured-top">
+      <div>
+        <h2> Featured Destinations </h2>
+        <p> Handpicked locations for your ultimate luxury escape. </p>
+      </div> <!-- FILTER BUTTONS -->
+      <div class="filter-buttons"> <button onclick="showAll()" class="active-filter"> All </button> <button
+          onclick="filterState('kerala')"> Kerala </button> <button onclick="filterState('tamilnadu')"> Tamil Nadu
+        </button> </div>
+    </div> <!-- DESTINATION CARDS -->
+    <div class="destination-cards" id="destinationCards"> <!-- CARD 1 -->
+      <div class="destination-card hill kerala"> <img src="Images/misty_emerald_tea_estates_in_munnar_kerala_with_lush_green_hills_and_a_wild.png">
+        <div class="destination-content">
+          <h3> Misty Tea Valleys </h3>
+          <p> Wake up to the aroma of fresh tea leaves and drifting clouds through Kerala's hill stations. </p>
+          <div class="destination-footer"> <span>Explore →</span> </div>
+        </div>
+      </div> <!-- CARD 2 -->
+      <div class="destination-card temple tamilnadu"> <img src="Images/madurai_meenakshi_temple_tamil_nadu_with_massive_brightly_colored_gopurams_and.png">
+        <div class="destination-content">
+          <h3> Ancient Temples </h3>
+          <p> Step back in time and witness the beauty of Tamil Nadu's historic temples. </p>
+          <div class="destination-footer"> <span>Explore →</span> </div>
+        </div>
+      </div> <!-- CARD 3 -->
+      <div class="destination-card backwater kerala"> <img src="Images/alleppey_backwaters_kerala_traditional_thatched_roof_houseboat_cruising_through.png">
+        <div class="destination-content">
+          <h3> Venice of the East </h3>
+          <p> Relax in luxury houseboats floating through endless palm-lined backwaters. </p>
+          <div class="destination-footer"> <span>Explore →</span> </div>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ================= BENEFITS ================= -->
+  <section class="benefits-section">
+    <div class="benefit-box">
+      <div class="benefit-icon"> 🗺 </div>
+      <h3> Curated Destinations </h3>
+      <p> Every stay and experience is personally vetted for authenticity. </p>
+    </div>
+    <div class="benefit-box">
+      <div class="benefit-icon"> ✦ </div>
+      <h3> Local Expertise </h3>
+      <p> Hidden stories and local secrets brought to life. </p>
+    </div>
+    <div class="benefit-box">
+      <div class="benefit-icon"> ⛺ </div>
+      <h3> Custom Travel Plans </h3>
+      <p> Journeys tailored perfectly to your interests. </p>
+    </div>
+  </section> <!-- ================= CTA SECTION ================= -->
+  <section class="explore-cta">
+    <div class="cta-dark"></div>
+    <div class="explore-cta-content">
+      <h2> Found Your Perfect Destination? </h2>
+      <p> Let us help you plan a smooth and unforgettable South India journey. </p>
+      <div class="cta-btns"> <button class="trip-btn"> Plan My Trip </button> <button class="contact-btn"> Contact Us
+        </button> </div>
+    </div>
+  </section> <!-- ================= FOOTER ================= -->
+  <footer class="explore-footer">
+    <div class="footer-grid">
+      <div>
+        <h2> ScaleLink </h2>
+        <p> Cinematic Luxury Travels across South India. </p>
+      </div>
+      <div>
+        <h4> Popular Regions </h4> <a href="#">Backwaters</a> <a href="#">Hill Stations</a> <a href="#">Cultural
+          Trails</a>
+      </div>
+      <div>
+        <h4> Company </h4> <a href="#">About Us</a> <a href="#">Privacy Policy</a> <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom"> © 2026 ScaleLink Tourism </div>
+  </footer> <!-- JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
