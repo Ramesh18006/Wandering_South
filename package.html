@@ -134,33 +134,34 @@
 <body class="bg-[#f9f9f8] text-[#1a1c1c] antialiased selection:bg-primary-dark selection:text-white">
     <div class="overlay-scrim" id="global-scrim"></div>
 
-    <nav class="bg-white/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-white/40 shadow-sm">
-        <div class="flex justify-between items-center px-5 md:px-16 py-4 max-w-7xl mx-auto">
-            <a class="text-3xl font-bold tracking-tighter text-primary hover:opacity-80 transition-opacity"
-                href="#">WANDERING <br>SOUTH</a>
+  <nav class="w-full px-[6%] py-[22px] flex justify-between items-center sticky top-0 bg-[#f6f2ed] z-50 border-b border-black/5" id="main-nav">
+    <a href="index.html" class="font-serif text-[2.2rem] leading-none text-[#0f5b4f] font-bold">WANDERING SOUTH</a>
+    
+    <div class="hidden md:flex gap-[35px] items-center" id="navLinks">
+      <a href="index.html" class="text-[#222] text-[15px] font-medium hover:text-[#0f5b4f] transition-colors">Home</a>
+      <a href="explore.html" class="text-[#222] text-[15px] font-medium hover:text-[#0f5b4f] transition-colors">Explore</a>
+      <a href="package.html" class="text-[#222] text-[15px] font-medium hover:text-[#0f5b4f] transition-colors">Packages</a>
+      <a href="about.html" class="text-[#222] text-[15px] font-medium hover:text-[#0f5b4f] transition-colors">Contact</a>
+    </div>
 
-            <div class="hidden md:flex gap-8 items-center">
-                <a class="text-sm font-bold tracking-wide text-text-muted hover:text-primary transition-colors duration-300"
-                    href="#">Destinations</a>
-                <a class="text-sm font-bold tracking-wide text-primary border-b-2 border-primary pb-1"
-                    href="#">Tours</a>
-                <a class="text-sm font-bold tracking-wide text-text-muted hover:text-primary transition-colors duration-300"
-                    href="#">Experiences</a>
-                <a class="text-sm font-bold tracking-wide text-text-muted hover:text-primary transition-colors duration-300"
-                    href="#">About</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <button
-                    class="hidden md:block bg-primary text-white px-6 py-2 rounded-full text-sm font-bold tracking-wide scale-95 active:opacity-80 transition-transform hover:bg-primary-dark">
-                    Book Now
-                </button>
-                <button class="md:hidden text-primary">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <div class="flex items-center gap-4">
+      <div class="userProfile hidden items-center gap-2 cursor-pointer text-[#0f5b4f] font-semibold mr-4">
+        <span class="text-[20px]">👤</span> <span class="userNameDisplay"></span>
+      </div>
+      
+      <button class="hidden md:block px-6 py-[14px] rounded-xl bg-[#0f5b4f] text-white font-medium hover:bg-[#0b4239] transition-colors nav-btn">Plan Your Journey</button>
+      
+      <div class="md:hidden text-[30px] text-[#0f5b4f] cursor-pointer" id="menuToggle">☰</div>
+    </div>
+    
+    <div class="fixed top-0 -right-full w-[280px] h-screen bg-white flex flex-col items-start pt-[80px] pl-[40px] transition-all duration-400 ease-in-out shadow-[-10px_0_30px_rgba(0,0,0,0.08)] z-[2000]" id="mobileNav">
+       <span class="block absolute top-5 right-6 text-[40px] text-[#0f5b4f] cursor-pointer leading-none" id="closeBtn">&times;</span>
+       <a href="index.html" class="mb-[25px] text-[18px] text-[#222] font-medium">Home</a>
+       <a href="explore.html" class="mb-[25px] text-[18px] text-[#222] font-medium">Explore</a>
+       <a href="package.html" class="mb-[25px] text-[18px] text-[#222] font-medium">Packages</a>
+       <a href="about.html" class="mb-[25px] text-[18px] text-[#222] font-medium">Contact</a>
+    </div>
+  </nav>
 
     <header class="relative pt-[120px] pb-20 min-h-[70vh] flex items-center justify-center">
         <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
@@ -196,7 +197,7 @@
 
     <main class="py-20">
 
-        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20">
+        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20" id="hill-stations">
             <div class="mb-8 text-center md:text-left">
                 <h2 class="text-4xl md:text-5xl font-bold text-primary mb-2">Escape Into The Mountains</h2>
                 <p class="text-lg text-text-muted">Cool weather, tea plantations, waterfalls...</p>
@@ -204,7 +205,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <div
+                <div id="munnar-card"
                     class="package-card relative bg-surface rounded-xl overflow-hidden shadow-ambient group flex flex-col cursor-pointer">
                     <div class="relative h-64 overflow-hidden">
                         <span
@@ -399,7 +400,7 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20">
+        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20" id="temples">
             <div class="mb-8 text-center md:text-left flex items-center justify-center md:justify-start gap-4">
                 <span class="material-symbols-outlined text-tertiary text-4xl"
                     style="font-variation-settings: 'FILL' 1;">temple_hindu</span>
@@ -407,7 +408,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div
+                <div id="madurai-card"
                     class="package-card md:col-span-8 bg-surface rounded-xl overflow-hidden shadow-ambient group relative min-h-[400px] flex items-end cursor-pointer">
                     <img alt="Madurai"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -572,7 +573,7 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20">
+        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20" id="beaches">
             <div class="mb-8 text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-primary mb-2">Coastal Escapes & Sunset Views</h2>
                 <div class="w-16 h-1 bg-[#2f6388] mx-auto rounded-full"></div>
@@ -734,7 +735,7 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20 bg-surface p-8 md:p-12 rounded-3xl">
+        <section class="max-w-7xl mx-auto px-5 md:px-16 mb-20 bg-surface p-8 md:p-12 rounded-3xl" id="backwaters">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
                 <div>
                     <h2 class="text-4xl md:text-5xl font-bold text-primary">Cruise Through Kerala’s Backwaters</h2>
@@ -747,7 +748,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div
+                <div id="alleppey-card"
                     class="package-card relative bg-white rounded-xl overflow-hidden shadow-sm transition-all group cursor-pointer">
                     <span
                         class="absolute top-4 left-4 z-20 badge-premium px-3 py-1 rounded-full font-bold text-[11px] uppercase tracking-wider">Top
@@ -1072,36 +1073,44 @@
             </h2>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <button
-                    class="bg-primary text-white text-sm font-bold tracking-wide px-8 py-4 rounded-full hover:bg-primary-dark transition-all">
+                    class="bg-primary text-white text-sm font-bold tracking-wide px-8 py-4 rounded-full hover:bg-primary-dark transition-all"
+                    onclick="openAuthModal()">
                     Sign In To Continue
                 </button>
                 <button
-                    class="bg-white border border-primary text-primary text-sm font-bold tracking-wide px-8 py-4 rounded-full hover:bg-surface transition-colors">
+                    class="bg-white border border-primary text-primary text-sm font-bold tracking-wide px-8 py-4 rounded-full hover:bg-surface transition-colors"
+                    onclick="window.location.href='about.html'">
                     Contact Travel Expert
                 </button>
             </div>
         </section>
     </main>
 
-    <footer class="w-full pt-20 pb-8 bg-primary">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-5 md:px-16 max-w-7xl mx-auto">
-            <div class="col-span-1">
-                <span class="text-3xl font-bold text-white block mb-4">Wandering South</span>
-                <p class="text-base text-[#80bea6] opacity-80">© 2024 wanderingsouth. All rights reserved.</p>
-            </div>
-            <div class="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-end gap-6 md:gap-12 pt-4 md:pt-0">
-                <a class="text-base text-[#80bea6] hover:text-white transition-opacity opacity-80" href="#">Privacy
-                    Policy</a>
-                <a class="text-base text-[#80bea6] hover:text-white transition-opacity opacity-80" href="#">Terms of
-                    Service</a>
-                <a class="text-base text-[#80bea6] hover:text-white transition-opacity opacity-80" href="#">Contact
-                    Us</a>
-                <a class="text-base text-[#80bea6] hover:text-white transition-opacity opacity-80"
-                    href="#">Sustainability</a>
-            </div>
-        </div>
-    </footer>
+  <footer class="bg-[#efe9e2] pt-[90px] pb-[30px] px-[6%]">
+    <div class="max-w-[1450px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]">
+      <div>
+        <h2 class="font-serif text-[1.2rem] text-[#0f5b4f] font-bold mb-[20px]">WANDERING SOUTH</h2>
+        <p class="mt-[20px] leading-[1.8] text-[#444]">Cinematic luxury travel experiences across South India.</p>
+      </div>
+      <div>
+        <h4 class="font-serif text-[1.2rem] text-[#0f5b4f] mb-[20px]">Explore</h4>
+        <a href="package.html#hill-stations" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">Hill Stations</a>
+        <a href="package.html#backwaters" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">Backwaters</a>
+        <a href="package.html#temples" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">Temples</a>
+      </div>
+      <div>
+        <h4 class="font-serif text-[1.2rem] text-[#0f5b4f] mb-[20px]">Company</h4>
+        <a href="about.html" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">About</a>
+        <a href="#" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">Privacy</a>
+        <a href="about.html" class="block text-[#444] mb-[14px] hover:text-[#0f5b4f]">Contact</a>
+      </div>
+    </div>
+    <div class="text-center mt-[60px] pt-[25px] border-t border-black/10 text-[#666]">
+      &copy; 2026 Wandering South Tourism
+    </div>
+  </footer>
 
+    <script src="script.js"></script>
     <script>
         // Logic for Mobile Interaction and Modal behavior
         const cards = document.querySelectorAll('.package-card');

@@ -540,8 +540,11 @@
       <span class="close-btn" id="closeBtn">&times;</span>
       <a href="index.html">Home</a>
       <a href="explore.html">Explore</a>
-      <a href="#">Packages</a>
-      <a href="#">Contact</a>
+      <a href="package.html">Packages</a>
+      <a href="about.html">Contact</a>
+    </div>
+    <div class="userProfile" style="display:none; align-items:center; gap:8px; cursor:pointer; color:#0f5b4f; font-weight:600; margin-right:15px;">
+      <span style="font-size:20px;">👤</span> <span class="userNameDisplay"></span>
     </div>
     <button class="nav-btn">Plan Your Journey</button>
     <div class="menu-toggle" id="menuToggle">☰</div>
@@ -588,7 +591,7 @@
   <section class="category">
     <h2 class="section-title">What Kind Of Experience Are You Looking For?</h2>
     <div class="category-grid">
-      <div class="category-card">
+      <div class="category-card" onclick="window.location.href='package.html#hill-stations'">
         <img src="Images/mount.png"
           alt="Hill Stations">
         <div class="overlay">
@@ -596,7 +599,7 @@
           <p>Explore</p>
         </div>
       </div>
-      <div class="category-card">
+      <div class="category-card" onclick="window.location.href='package.html#temples'">
         <img src="Images/Temple_piller.png"
           alt="Temples">
         <div class="overlay">
@@ -604,7 +607,7 @@
           <p>Explore</p>
         </div>
       </div>
-      <div class="category-card">
+      <div class="category-card" onclick="window.location.href='package.html#beaches'">
         <img src="Images/beach_view.png"
           alt="Beaches">
         <div class="overlay">
@@ -612,7 +615,7 @@
           <p>Explore</p>
         </div>
       </div>
-      <div class="category-card">
+      <div class="category-card" onclick="window.location.href='package.html#backwaters'">
         <img src="Images/pichavaram_mangroves_tamil_nadu_narrow_water_trails_under_a_canopy_of_mangrove (1).png"
           alt="Backwaters">
         <div class="overlay">
@@ -620,7 +623,7 @@
           <p>Explore</p>
         </div>
       </div>
-      <div class="category-card">
+      <div class="category-card" onclick="window.location.href='package.html#temples'">
         <img src="Images/fort_kochi_streets_kerala_colonial_architecture_with_portuguese_and_dutch.png"
           alt="Historic">
         <div class="overlay">
@@ -639,7 +642,7 @@
         <div class="destination-content">
           <h3>Munnar</h3>
           <p>Tea valleys, misty mountains, luxury resorts and peaceful landscapes.</p>
-          <a href="#">Explore &rarr;</a>
+          <a href="package.html#munnar-card">Explore &rarr;</a>
         </div>
       </div>
       <div class="destination-card">
@@ -648,7 +651,7 @@
         <div class="destination-content">
           <h3>Madurai</h3>
           <p>Ancient temples, spiritual beauty and cultural heritage of Tamil Nadu.</p>
-          <a href="#">Explore &rarr;</a>
+          <a href="package.html#madurai-card">Explore &rarr;</a>
         </div>
       </div>
       <div class="destination-card">
@@ -657,7 +660,7 @@
         <div class="destination-content">
           <h3>Alleppey</h3>
           <p>Luxury houseboats floating through Kerala's calm backwaters.</p>
-          <a href="#">Explore &rarr;</a>
+          <a href="package.html#alleppey-card">Explore &rarr;</a>
         </div>
       </div>
     </div>
@@ -667,8 +670,8 @@
     <h2>Found Your Perfect Destination?</h2>
     <p>Let us help you plan a memorable South India journey tailored perfectly for you.</p>
     <div class="cta-buttons">
-      <button class="primary">Plan My Trip</button>
-      <button class="secondary">Contact Us</button>
+      <button class="primary" onclick="window.location.href='package.html'">Plan My Trip</button>
+      <button class="secondary" onclick="window.location.href='about.html'">Contact Us</button>
     </div>
   </section>
 
@@ -686,9 +689,9 @@
       </div>
       <div>
         <h4>Company</h4>
-        <a href="#">About</a>
+        <a href="about.html">About</a>
         <a href="#">Privacy</a>
-        <a href="#">FAQ</a>
+        <a href="about.html">Contact</a>
       </div>
     </div>
     <div class="bottom">
